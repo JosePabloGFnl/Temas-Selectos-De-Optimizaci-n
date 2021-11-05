@@ -15,10 +15,6 @@ class Array:
         self.pos = pos
         self.dist = '-'
 
-    #def __getitem__(self, x, y):
-    #    return self.x[x] #return the element in the wanted position
-    #    return self.y[y]
-
     def __repr__(self):
         return '{} : {} : {} : {}'.format(self.x, self.y, self.pos, self.dist)
 
@@ -38,15 +34,10 @@ with open('outputfile1.txt','r') as file:
         main_array.append(Array(x, y, pos))
 
 #----CONSTRUCTUVE HEURISTIC----
-#print(main_array)
 #choosing a random point
 
 
 initpoint = random.choice(list(main_array))
-
-#print(initpoint)
-#print(initpoint.x)
-#print(initpoint.y)
 
 #for loop used to append the distances
 for coord in main_array:
@@ -56,22 +47,11 @@ for coord in main_array:
     # the distance is set to the current object
     coord.dist = distance
 
-#print(main_array)
-
 main_array.sort(key=attrgetter('dist'), reverse=True)
 
 sum = 0
 i=0
 result_array=[]
-#class result:
-#    def __init__(self, x, y, pos, dist):
-#        self.x = x
-#        self.y = y
-#        self.pos = pos
-#        self.distt = distt
-
-#    def __repr__(self):
-#        return '{} : {} : {} : {}'.format(self.x, self.y, self.pos, self.distt)
 
 for coord in main_array:
     i=i+1
