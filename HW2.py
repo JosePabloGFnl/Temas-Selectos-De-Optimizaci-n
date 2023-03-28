@@ -122,11 +122,7 @@ for i in range(k):
 
                     (main_array[i].v), (main_array[i+1].v) = (main_array[i+1].v), (main_array[i].v)
 
-        heuristic_w_sort = main_array
-
-    #for heuristic_w_sort in heuristic_w_sort:
-    #    print(heuristic_w_sort)
-    #print("\n")
+        heuristic_w_sort = main_array
 
 
 
@@ -143,7 +139,6 @@ for i in range(k):
                 w_bar=w_bar-(main_array[i].w)
                 break
 
-    #print(w_bar)
         print("Heuristic W: f(x) " + str(w_sum) + "\n")
 
 
@@ -161,11 +156,7 @@ for i in range(k):
 
                     (main_array[i].w), (main_array[i+1].w) = (main_array[i+1].w), (main_array[i].w)
 
-        heuristic_v_sort = main_array
-
-    #for heuristic_v_sort in heuristic_v_sort:
-    #    print(heuristic_v_sort)
-    #print("\n")
+        heuristic_v_sort = main_array
 
 
 #sum of f(x) in heuristic v
@@ -178,8 +169,7 @@ for i in range(k):
             if weight<w_bar:
                 v_sum=v_sum-(main_array[i].v)
                 w_bar=w_bar-(main_array[i].w)
-
-    #print(w_bar)
+
         print("Heuristic V: f(x) " + str(v_sum) + "\n")
 
     if decision ==3:
@@ -196,11 +186,7 @@ for i in range(k):
 
                     (main_array[i].w), (main_array[i+1].w) = (main_array[i+1].w), (main_array[i].w)
 
-        heuristic_v_sort = main_array
-
-    #for heuristic_r_sort in heuristic_r_sort:
-    #    print(heuristic_r_sort )
-    #print("\n")
+        heuristic_v_sort = main_array
 
 #sum of f(x) in heuristic r
         r_sum=0
@@ -214,8 +200,7 @@ for i in range(k):
             if weight<w_bar:
 
                 r_sum=r_sum-(main_array[i].v)
-                w_bar=w_bar-(main_array[i].w)
-    #print(w_bar)
+                w_bar=w_bar-(main_array[i].w)
         print("Heuristic R: f(x) " + str(r_sum) + "\n")
 
 
